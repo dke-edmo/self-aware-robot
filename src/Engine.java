@@ -5,7 +5,8 @@ public class Engine {
 
     JFrame frame;
     GUI gui;
-    public final int TIMESTEP = 1000;   //in Milliseconds
+    public final int TIMESTEP = 1000/30;   //in Milliseconds
+    double angle = 0;
 
     public Engine(){
 
@@ -38,6 +39,14 @@ public class Engine {
 
         //Update the gui
         gui.sendData(robot, nodeList);
+       // gui.addScale(new double[]{0.1,0,0});
+
+        //Just messing around with visual effects, you can get rid of these :)
+        angle += 0.02;
+        gui.rotateX(Math.PI*angle);
+        gui.rotateY(Math.PI*angle);
+        gui.rotateZ(Math.PI*angle);
+
         gui.repaint();
         System.out.println("This is a step");
         wait(TIMESTEP);

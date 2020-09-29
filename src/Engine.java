@@ -11,7 +11,7 @@ public class Engine {
 
         //Create an Object Factory which will produce the graph for the robot, and possibly later objects
         //Specify which robot you want to use
-        ObjectFactory factory = new ObjectFactory("robot1");
+        ObjectFactory factory = new ObjectFactory("robot2");
         //Retrieve the robot
         Graph graph = factory.getRobot();
 

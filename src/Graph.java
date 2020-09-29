@@ -60,6 +60,7 @@ public class Graph {
                 System.out.println("Yes it is, can be added for Node(" + node.label + ")");
                 this.nodes.add(node);
                 this.mass += node.mass; //Update the mass of the graph
+                System.out.println("mass: " + mass);
             }
         }
 

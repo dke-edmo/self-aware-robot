@@ -37,8 +37,8 @@ public class Engine {
         System.out.println("Center of mass of robot is: " + robot.centerOfMass.dispCoords());
 
         //Update the gui
-        this.gui.sendData(robot, nodeList);
-        this.gui.repaint();
+        gui.sendData(robot, nodeList);
+        gui.repaint();
         System.out.println("This is a step");
         wait(TIMESTEP);
     }
@@ -53,8 +53,8 @@ public class Engine {
     public void gui_interface(Graph robot, ArrayList<Node> nodeList){
         frame = new JFrame("Interface");
         frame.setSize(1000,800);
-        this.gui = new GUI(1000,800);
-        this.gui.sendData(robot, nodeList);
+        gui = new GUI(1000,800);
+        gui.sendData(robot, nodeList);
         frame.add(gui);
         frame.setVisible(true);
     }

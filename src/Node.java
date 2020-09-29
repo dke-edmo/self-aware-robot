@@ -33,7 +33,7 @@ public class Node {
         }
 
         //If the distance exceeds the specified length, rejects. Possibly change to have it match exactly
-        if(this.getDistance(node) <= length){
+        if(getDistance(node) <= length){
             System.out.println("Point can be added as an edge: " + node.label + " distance is + " + this.getDistance(node));
             this.endPoints.add(node);
         } else {

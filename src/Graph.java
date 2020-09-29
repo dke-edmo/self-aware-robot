@@ -3,9 +3,9 @@ import java.util.Iterator;
 
 public class Graph {
 
-    String label = "";
-    ArrayList<Node> nodes;
-    Node centerOfMass = new Node("centerOfMass", 0,0,0);    //Default center of mass
+    public String label = "";
+    public ArrayList<Node> nodes;
+    public Node centerOfMass = new Node("centerOfMass", 0,0,0);    //Default center of mass
     double mass = 0;
 
     public Graph(String label){

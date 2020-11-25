@@ -42,10 +42,10 @@ public class Engine {
        // gui.addScale(new double[]{0.1,0,0});
 
         //Just messing around with visual effects, you can get rid of these :)
-        angle += 0.02;
+      /*  angle += 0.02;
         gui.rotateX(Math.PI*angle);
         gui.rotateY(Math.PI*angle);
-        gui.rotateZ(Math.PI*angle);
+        gui.rotateZ(Math.PI*angle);*/
 
         gui.repaint();
         System.out.println("This is a step");

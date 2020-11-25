@@ -17,15 +17,11 @@ RectangleArena {
 Robot {
   scale 0.1 0.1 0.1
   children [
-<<<<<<< HEAD:worlds/EDMO.wbt
     Accelerometer {
     }
-    DEF Body Group {
-=======
     Solid {
       translation 1.9599999999999977 -0.002245179967795975 0
       rotation 0 0 0.9999999999999999 -1.5707953071795862
->>>>>>> d680ffb562305599987df38abb5510793165b6ab:EDMO.wbt
       children [
         Solid {
           children [

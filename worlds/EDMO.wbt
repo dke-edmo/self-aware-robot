@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.131172284556832 -0.9911955037119302 -0.018036218711087532 0.4737267281236531
-  position -18.140116731465667 -0.23172783299673755 35.407817508910966
+  orientation 0.17077354874386672 -0.9471725403538372 -0.2714784961080435 4.238858324215098
+  position 47.32346753294951 17.48875810384591 -16.035740333623913
 }
 TexturedBackground {
 }
@@ -17,13 +17,17 @@ RectangleArena {
 Robot {
   scale 0.1 0.1 0.1
   children [
+<<<<<<< HEAD:worlds/EDMO.wbt
     Accelerometer {
     }
     DEF Body Group {
+=======
+    Solid {
+      translation 1.9599999999999977 -0.002245179967795975 0
+      rotation 0 0 0.9999999999999999 -1.5707953071795862
+>>>>>>> d680ffb562305599987df38abb5510793165b6ab:EDMO.wbt
       children [
-        Transform {
-          translation 1.96 1.99847e-06 0
-          rotation 0 0 1 -1.5707953071795862
+        Solid {
           children [
             DEF SHAPE Shape {
               appearance PBRAppearance {
@@ -48,10 +52,17 @@ Robot {
               }
             }
           ]
+          name ""
+          boundingObject USE SHAPE
         }
-        Transform {
-          translation 1.80983 -59.75 30.43
-          rotation 0.7071072811865696 0.7071062811861719 1.0171504044775673e-08 3.14159
+      ]
+      name "<STL_BINARY>(2)"
+    }
+    Solid {
+      translation 1.8098300000000123 -59.75199967363121 30.43
+      rotation 0.7071072811865696 0.7071062811861719 1.0171504044775853e-08 3.14159
+      children [
+        Solid {
           children [
             DEF SHAPE Shape {
               appearance PBRAppearance {
@@ -76,18 +87,23 @@ Robot {
               }
             }
           ]
+          name ""
+          boundingObject USE SHAPE
         }
       ]
+      name "<STL_BINARY>(1)"
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 4.213113348009401e-05
         anchor 0 -39 15
       }
       endPoint Solid {
-        translation -0.89 -101.14 0
-        rotation 1 0 0 0
+        translation -0.89 -101.139 0.047382
+        rotation 1 0 0 4.2131135344803114e-05
         children [
           Solid {
+            translation -0.81 0 0
             children [
               DEF SHAPE Shape {
                 appearance PBRAppearance {
@@ -117,16 +133,30 @@ Robot {
           }
         ]
         name "<STL_BINARY>"
-        boundingObject USE SHAPE
+        boundingObject Transform {
+          translation 25.58 29.72 15
+          children [
+            Box {
+              size 73 70 30
+            }
+          ]
+        }
         physics Physics {
           mass 10
         }
       }
     }
   ]
-  boundingObject USE Body
+  boundingObject Transform {
+    translation 24.5 -5.62 15
+    children [
+      Box {
+        size 73 65 30
+      }
+    ]
+  }
   physics Physics {
-    mass 100
+    mass 40
   }
   controller "AccelerometerController"
   supervisor TRUE

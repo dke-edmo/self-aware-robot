@@ -17,6 +17,8 @@ RectangleArena {
 Robot {
   scale 0.1 0.1 0.1
   children [
+    Accelerometer {
+    }
     DEF Body Group {
       children [
         Transform {
@@ -126,4 +128,6 @@ Robot {
   physics Physics {
     mass 100
   }
+  controller "AccelerometerController"
+  supervisor TRUE
 }

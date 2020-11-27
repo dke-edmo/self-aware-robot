@@ -4,7 +4,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0.17077354874386672 -0.9471725403538372 -0.2714784961080435 4.238858324215098
-  position 47.32346753294951 17.48875810384591 -16.035740333623913
+  position 48.98149391401662 18.614246163604104 -16.781361266396747
 }
 TexturedBackground {
 }
@@ -94,8 +94,19 @@ Robot {
         position 4.213113348009401e-05
         anchor 0 -39 15
       }
+      device [
+        PositionSensor {
+        }
+        Brake {
+        }
+        RotationalMotor {
+          acceleration 10
+          minPosition -2
+          maxPosition 2
+        }
+      ]
       endPoint Solid {
-        translation -0.89 -101.139 0.047382
+        translation -0.8899999999999982 -101.13899999999998 0.0473820000000007
         rotation 1 0 0 4.2131135344803114e-05
         children [
           Solid {
@@ -154,6 +165,6 @@ Robot {
   physics Physics {
     mass 40
   }
-  controller "AccelerometerController"
+  controller "HingeJointController"
   supervisor TRUE
 }

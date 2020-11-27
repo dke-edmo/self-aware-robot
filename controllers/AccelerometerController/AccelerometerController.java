@@ -17,7 +17,6 @@ public class AccelerometerController {
 
     // get the time step of the current world.
     int timeStep = (int) Math.round(robot.getBasicTimeStep());
-
     Accelerometer accelerometer = robot.getAccelerometer("accelerometer");
     accelerometer.enable(10);
     // Main loop:

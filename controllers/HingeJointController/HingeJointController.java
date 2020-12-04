@@ -34,6 +34,7 @@ public class HingeJointController {
     Node rotM = hingeJointChildren.getMFNode(0);
     Motor r = robot.getMotor("rotational motor");
     Brake brake = robot.getBrake("brake");
+    
     System.out.println("child = " + brake.getName());
     PositionSensor ps = robot.getPositionSensor("position sensor");
     ps.enable(10);
@@ -42,12 +43,24 @@ public class HingeJointController {
 
     while (robot.step(timeStep) != -1) {
       
-      r.setPosition(2);
+      /*r.setPosition(2);
       r.setVelocity(10.0);
+      if(ps.getValue() >= 2)
+      {
+        brake.setDampingConstant(Double.POSITIVE_INFINITY);
+      }*/
+      setPositionBrake(r, ps, brake);
 
       System.out.println("Position sensor = " + ps.getValue());
 
     };
 
+  }
+  public static void setPositionBrake(Motor r, PositionSensor ps, Brake brake){
+    r.setPosition(2);
+    r.setVelocity(10.0);
+    if(ps.getValue() >= 2) {
+      brake.setDampingConstant(Double.POSITIVE_INFINITY);
+    }
   }
 }
